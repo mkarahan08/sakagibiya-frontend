@@ -1,0 +1,480 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(10px);
+  padding: 10px 40px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  height: 80px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: visible;
+}
+
+/* Logo Section */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.logo-link:hover {
+  transform: scale(1.05);
+}
+
+.logo-icon-wrapper {
+  width: 46px;
+  height: 46px;
+  background: linear-gradient(135deg, #ff8c00 0%, #ffb700 100%);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(255, 140, 0, 0.4);
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.logo-link:hover .logo-icon-wrapper {
+  transform: rotate(-8deg) scale(1.1);
+  box-shadow: 0 6px 20px rgba(255, 140, 0, 0.55);
+}
+
+.logo-icon {
+  font-size: 26px;
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.25));
+}
+
+/* Metin sarmalayıcı */
+.logo-text {
+  display: flex;
+  align-items: baseline;
+  line-height: 1;
+}
+
+/* "ŞakaGibi" — turuncu, bold, geniş */
+.logo-text-main {
+  font-size: 26px;
+  font-weight: 900;
+  color: #ff6600;
+  letter-spacing: -0.5px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  text-shadow: 0 1px 0 rgba(255, 102, 0, 0.15);
+}
+
+/* "Ya" — navy, el yazısı, daha küçük */
+.logo-text-ya {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a3a6b;
+  font-family: 'Caveat', cursive;
+  letter-spacing: 0;
+  margin-left: 1px;
+  position: relative;
+  top: 2px;
+}
+
+/* "Ya" altındaki çizgi efekti */
+.logo-text-ya::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 2.5px;
+  background: #1a3a6b;
+  border-radius: 2px;
+}
+
+/* Search Section */
+.navbar-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.search-area {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+}
+
+.search {
+  width: 100%;
+  height: 44px;
+  border-radius: 12px;
+  border: 2px solid #e5e7eb;
+  padding: 0 50px 0 18px;
+  font-size: 15px;
+  color: #333;
+  outline: none;
+  transition: all 0.3s ease;
+  background: #f8f9fa;
+  box-sizing: border-box;
+}
+
+.search:focus {
+  border-color: #ff6600;
+  background: white;
+  box-shadow: 0 0 0 4px rgba(255, 102, 0, 0.1);
+}
+
+.search::placeholder {
+  color: #9ca3af;
+}
+
+.search-btn {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: linear-gradient(135deg, #ff6600 0%, #ff8533 100%);
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(255, 102, 0, 0.3);
+}
+
+.search-btn:hover {
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 4px 12px rgba(255, 102, 0, 0.4);
+}
+
+.search-btn:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+/* Right Section */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+/* Modern Action Buttons */
+.nav-action-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 102, 0, 0.1);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  min-width: 70px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.nav-action-button:hover {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(255, 102, 0, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 102, 0, 0.15);
+}
+
+.nav-action-button:active {
+  transform: translateY(0);
+}
+
+/* Icon Wrapper */
+.nav-icon-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+
+.nav-icon {
+  font-size: 24px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Favoriler Butonu */
+.favorites-button .heart-outline {
+  color: #6b7280;
+}
+
+.favorites-button .heart-filled {
+  color: #ef4444;
+  animation: heartBeat 2s ease-in-out infinite;
+}
+
+.favorites-button:hover .heart-outline {
+  color: #ef4444;
+  transform: scale(1.15);
+}
+
+.favorites-button:hover .heart-filled {
+  transform: scale(1.15);
+}
+
+@keyframes heartBeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* Kullanıcı Butonu */
+.user-button .user-outline {
+  color: #6b7280;
+}
+
+.user-button .user-filled {
+  color: #ff6600;
+}
+
+.user-button:hover .user-outline {
+  color: #ff6600;
+  transform: scale(1.15);
+}
+
+.user-button:hover .user-filled {
+  transform: scale(1.15);
+}
+
+/* Badge */
+.nav-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 10px;
+  min-width: 18px;
+  height: 18px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.4);
+  border: 2px solid white;
+  animation: pulse-badge 2s ease-in-out infinite;
+}
+
+@keyframes pulse-badge {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+}
+
+/* Action Label */
+.nav-action-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #374151;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+}
+
+.favorites-button:hover .nav-action-label {
+  color: #ef4444;
+}
+
+.user-button:hover .nav-action-label {
+  color: #ff6600;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .navbar {
+    padding: 12px 24px;
+  }
+
+  .logo-text {
+    font-size: 20px;
+  }
+
+  .logo-icon-wrapper {
+    width: 42px;
+    height: 42px;
+  }
+
+  .logo-icon {
+    font-size: 24px;
+  }
+
+  .navbar-center {
+    padding: 0 12px;
+  }
+
+  .search {
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .search-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+
+  .nav-action-button {
+    min-width: 60px;
+    padding: 6px 10px;
+  }
+
+  .nav-icon-wrapper {
+    width: 36px;
+    height: 36px;
+  }
+
+  .nav-icon {
+    font-size: 22px;
+  }
+
+  .nav-action-label {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 16px;
+    height: auto;
+    min-height: 60px;
+  }
+
+  .logo-text {
+    display: none;
+  }
+
+  .logo-icon-wrapper {
+    width: 40px;
+    height: 40px;
+  }
+
+  .logo-icon {
+    font-size: 22px;
+  }
+
+  .navbar-center {
+    padding: 0 8px;
+    flex: 1;
+  }
+
+  .search {
+    height: 38px;
+    padding: 0 45px 0 14px;
+    font-size: 14px;
+  }
+
+  .search-btn {
+    width: 30px;
+    height: 30px;
+    right: 6px;
+  }
+
+  .navbar-right {
+    gap: 10px;
+  }
+
+  .nav-action-button {
+    min-width: 56px;
+    padding: 6px 8px;
+  }
+
+  .nav-icon-wrapper {
+    width: 32px;
+    height: 32px;
+  }
+
+  .nav-icon {
+    font-size: 20px;
+  }
+
+  .nav-action-label {
+    font-size: 9px;
+  }
+
+  .nav-badge {
+    font-size: 9px;
+    padding: 1px 5px;
+    min-width: 16px;
+    height: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 8px 12px;
+  }
+
+  .search {
+    font-size: 13px;
+    padding: 0 40px 0 12px;
+  }
+
+  .search::placeholder {
+    font-size: 12px;
+  }
+
+  .navbar-right {
+    gap: 8px;
+  }
+
+  .nav-action-button {
+    min-width: 50px;
+    padding: 6px;
+  }
+
+  .nav-icon-wrapper {
+    width: 28px;
+    height: 28px;
+  }
+
+  .nav-icon {
+    font-size: 18px;
+  }
+
+  .nav-action-label {
+    font-size: 8px;
+  }
+
+  .nav-badge {
+    font-size: 8px;
+    padding: 1px 4px;
+    min-width: 14px;
+    height: 14px;
+    top: -2px;
+    right: -2px;
+  }
+}

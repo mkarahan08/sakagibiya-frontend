@@ -1,0 +1,38 @@
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* App Layout */
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.app-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: visible;
+  position: relative;
+}
+
+.main-content {
+  flex: 1;
+  /* Navbar (80px) + CategoryBar (~50px) çıkarılarak footer her zaman ekranın altına itilir */
+  min-height: calc(100vh - 130px);
+  overflow-x: hidden;
+  overflow-y: visible;
+  position: relative;
+  z-index: 0;
+}
+

@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
-// API base
-const API_URL = "http://localhost:5000/api/users";
+// API base — Vercel'de VITE_API_URL env variable'ı tanımlanmalı
+const API_URL = `${import.meta.env.VITE_API_URL || "http://localhost:5000/api"}/users`;
 
 /* ============================
    ASYNC THUNKS

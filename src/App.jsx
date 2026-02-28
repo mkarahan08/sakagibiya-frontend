@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import { Analytics } from '@vercel/analytics/react'
 import './App.css'
 import Home from './pages/Home/Home'
 import Navbar from './components/Navbar/Navbar'
@@ -29,6 +30,7 @@ function App() {
           <RouterConfig/>
         </main>
         <Footer/>
+        <Analytics />
     </div>
   )
 }

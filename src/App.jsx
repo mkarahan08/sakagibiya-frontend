@@ -8,6 +8,7 @@ import RouterConfig from './config/RouterConfig'
 import CategoryBar from './components/CategoryBar/CategoryBar'
 import Footer from './components/Footer/Footer'
 import { fetchFavorites } from './redux/slices/favoritesSlice'
+import { Analytics } from '@vercel/analytics/react'
 
 
 function App() {
